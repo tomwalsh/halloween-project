@@ -1,0 +1,2 @@
+# halloween-doormat
+This is a Python project re-purposing a simple "spooky" doormat to detect someone stepping on it, and then playing a random sound from the local library. It is based off the Raspberry Pi and a Pi-Plate to act as the DAC to sample the mat.
