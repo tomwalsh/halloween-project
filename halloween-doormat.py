@@ -53,6 +53,7 @@ def randomFile(dir):
 
 def signal_handler( signal, frame ):
 	pygame.mixer.stop()
+	DAQC.clrDOUTbit(0,0)
 	sys.exit(0)
 
 if __name__=="__main__":
