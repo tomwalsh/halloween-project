@@ -1,7 +1,9 @@
-Halloween Doormat
+Halloween "Spooky" Project
 =================
 
 The purpose of this project was to improve upon a product that we purchased from BigLots. The product was a very simple speaker with a mat that would play a "spooky" sound anytime somebody stepped on it. The device worked well enough, but the sound (yes only one) was not terriblly spooky, so I decided that it needed to be improved upon.
+
+After setting up the doormat, I decided I wanted to go with a motion sensor to improve the detection. So I have added that to this project since it is basically the same process. There is a lot of reptition in the two code bases, but this is just a quick and dirty implementation so I am not too concerned about code quality.
 
 Hardware Required
 -----------------
