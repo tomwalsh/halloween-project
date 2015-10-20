@@ -16,7 +16,7 @@ def main():
 	signal.signal(signal.SIGINT, signal_handler)
 	while True:
 		value = round(DAQC.getADC(0, DACport), 2)
-		if (value < 3.20) or (value > 3.6) :
+		if (value < 3.20) or (value > 3.7) :
 			print "Value " + str(value) + ", Activated!"
 			DAQC.setDOUTbit(0,0)
 			playAudio()
