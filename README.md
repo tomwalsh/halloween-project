@@ -8,9 +8,16 @@ Hardware Required
 
 This system is designed to work with the following hardware:
 
+**halloween-doormat.py**
+
 * [Raspberry Pi](https://www.raspberrypi.org/) (any model with GPIO functionality - which is all of them currently)
 * [Pi-Plates DAQCPlate](https://pi-plates.com/) - I used the Pi-Plate because that is what I had on hand already, but any DAC that can interface with the RPi will work. It's up to you to change the code to work with your DAC of choice though.
 * A microphone - After some investigation I determined that the "mat" was nothing more than a microphone and that the system just montiored the microphone for voltage changes, and would play the sound when the voltage changed.
+
+**halloween-motion.py**
+
+* [Raspberry Pi](https://www.raspberrypi.org/) (any model with GPIO functionality - which is all of them currently)
+* [Adafruit PIR (Motion) Sensor](https://www.adafruit.com/product/189) - You don't have to use this specific one from AdaFruit, but I recommend supporting them since they are pretty awesome (even if not the cheapest around)
 
 Software Required
 -----------------

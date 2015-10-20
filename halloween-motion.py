@@ -2,29 +2,28 @@
 import signal
 import sys
 import pygame
-import piplates.DAQCplate as DAQC
 import time
 from os import listdir
 from random import choice
+import RPi.GPIO as io
 
 audiotypes = { "wav" }
-DACport = 0
-
 lastfiles = []
+pir_pin = 23
+
+io.setmode(io.BCM)
 
 def main():
+	io.setup(pir_pin, io.IN)
 	signal.signal(signal.SIGINT, signal_handler)
 	while True:
-		value = round(DAQC.getADC(0, DACport), 2)
-		if (value < 3.20) or (value > 3.6) :
-			print "Value " + str(value) + ", Activated!"
-			DAQC.setDOUTbit(0,0)
+		if io.input(pir_pin):
+			print "Activated!"
 			playAudio()
-			DAQC.clrDOUTbit(0,0)
 		else:
-			print "Value " + str(value) + ", Waiting..."
+			print "Waiting..."
 		time.sleep(0.1)
-	GPIO.cleanup()
+	io.cleanup()
 
 def playAudio():
 	global lastfiles
@@ -52,7 +51,6 @@ def randomFile(dir):
 
 def signal_handler( signal, frame ):
 	pygame.mixer.stop()
-	DAQC.clrDOUTbit(0,0)
 	sys.exit(0)
 
 if __name__=="__main__":
