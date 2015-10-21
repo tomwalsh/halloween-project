@@ -36,12 +36,16 @@ https://youtu.be/sh9OunKbmrY
 Batteries Not Included
 ----------------------
 
-While this code is designed to play a ranom audio file from the current script directory, I didn't include the sounds that I am using. The sounds were created by a friend who is a professional voice over artist, and they aren't mine to give away. Sorry. I am sure you can find your own floating around on the interwebs.
+While this code is designed to play a random audio file from the current script directory, I didn't include the sounds that I am using. The sounds were created by a friend who is a voice over professional, and they aren't mine to give away. Sorry. I am sure you can find your own floating around on the interwebs.
 
 ### How it Works
 
+##halloween-doormat.py##
 This script is designed to be run from the command line (but I am betting you can set it up to run from rc.local if you wanted to). All it does is attach to the DAC channel and start monitoring the voltages returned from the microphone. When the voltage changes beyond a certain threshold, then we use pygame to play the file.
+
+##halloween-motion.py##
+Same as above, but looks for motion which triggers a GPIO pin on Raspberry Pi, which then uses the same pygame method to play a random audio file.
 
 The system will wait until the audio is done playing before playing another.
 
-Some other minor tweaks: I have made the system monitor which audio files it has most recently played. This is intended to prevent the same random file being played mutliple times in a row.
+Some other minor tweaks: I have made the system monitor which audio files it has most recently played. This is intended to prevent the same random file being played mutliple times in a row. The default is 3 times, but you can easily adjust it in the code.
