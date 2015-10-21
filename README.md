@@ -27,7 +27,7 @@ Software Required
 * Python 2.x
 * Raspbian (I am running Jessie, but anything else should work too)
 
-Set It In Action
+See It In Action
 ----------------
 
 https://youtu.be/sh9OunKbmrY
